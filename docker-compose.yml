@@ -17,10 +17,10 @@ services:
       dockerfile: Dockerfile
     image: gstav-backend
     ports:
-      - "7248:80"
+      - "5000:5000"
     volumes:
       - ./backend:/backend
-    env_file: .env
+    env_file: .environment
 
   db:
     container_name: cgstav-db
@@ -29,7 +29,7 @@ services:
       dockerfile: Dockerfile
     image: gstav-db
     ports:
-      - "27019:27017"
+      - "27017:27017"
     volumes:
       - ./db/data:/data/db
     command: mongod --quiet --logpath /dev/null

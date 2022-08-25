@@ -50,9 +50,12 @@ export default class FlickrViewer extends Vue {
   }[] = [];
 
   public async getDogs() {
+    const protocol = process.env.VUE_APP_BACKEND_PROTOCOL;
+    const port = process.env.VUE_APP_BACKEND_PORT;
+
     try {
       // const response = await fetch(`${window.location.protocol}//${window.location.hostname}:7248/api/flickr/getDogs`)
-      const response = await fetch(`http://${window.location.hostname}:7248/api/flickr/getDogs`)
+      const response = await fetch(`${protocol}://${window.location.hostname}:${port}/api/flickr/getDogs`)
       if (response.status === 200) {
         const data = await response.json()
         this.dogs = data.photos.photo
@@ -71,8 +74,11 @@ export default class FlickrViewer extends Vue {
   }
 
   public async getTaggedImages() {
+    const protocol = process.env.VUE_APP_BACKEND_PROTOCOL;
+    const port = process.env.VUE_APP_BACKEND_PORT;
+
     try {
-      const response = await fetch(`http://${window.location.hostname}:7248/api/flickr/getTaggedImages?tag=${this.tag}`)
+      const response = await fetch(`${protocol}://${window.location.hostname}:${port}/api/flickr/getTaggedImages?tag=${this.tag}`)
       if (response.status === 200) {
         const data = await response.json()
         this.taggedImages = data.photos.photo

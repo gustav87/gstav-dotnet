@@ -51,6 +51,8 @@ export default class DbStuff extends Vue {
   searchResult = "";
 
   public async submitInsertRowForm() {
+    const protocol = process.env.VUE_APP_BACKEND_PROTOCOL;
+    const port = process.env.VUE_APP_BACKEND_PORT;
     const now = new Date();
     const today = now.toISOString().split('T')[0];
 
@@ -59,7 +61,7 @@ export default class DbStuff extends Vue {
       headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({Name: this.name, Email: this.email, Date: today})
     }
-    fetch(`http://${window.location.hostname}:7248/api/guests/insertRow`, requestOptions)
+    fetch(`${protocol}://${window.location.hostname}:${port}/api/guests/insertRow`, requestOptions)
       .then(response => {
         if (response.ok) {
           this.insertResult = "Record inserted into database.";
@@ -78,8 +80,11 @@ export default class DbStuff extends Vue {
   }
 
   public submitSearchDbForm() {
-    const queryString = this.filter ? `?filter=${this.filter}` : ''
-    fetch(`http://${window.location.hostname}:7248/api/guests${queryString}`)
+    const protocol = process.env.VUE_APP_BACKEND_PROTOCOL;
+    const port = process.env.VUE_APP_BACKEND_PORT;
+    const queryString = this.filter ? `?filter=${this.filter}` : '';
+
+    fetch(`${protocol}://${window.location.hostname}:${port}/api/guests${queryString}`)
       .then(response => {
         if (response.ok) {
           return response.json();

@@ -45,9 +45,11 @@ export default class Contact extends Vue {
 
 
   public async submitForm() {
+    const protocol = process.env.VUE_APP_BACKEND_PROTOCOL;
+    const port = process.env.VUE_APP_BACKEND_PORT;
     try {
       const queryParams = `name=${this.name}&email=${this.email}&topic=${this.topic}&message=${this.message}`
-      const response = await fetch(`http://${window.location.hostname}:7248/api/contact?${queryParams}`)
+      const response = await fetch(`${protocol}://${window.location.hostname}:${port}/api/contact?${queryParams}`)
       if (response.status === 200) {
         // const data = await response.json();
         // console.log(data);

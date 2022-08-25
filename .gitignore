@@ -2,7 +2,7 @@
 .vscode
 
 # backend ignores
-.env
+.environment
 [Bb]in
 [Oo]bj
 

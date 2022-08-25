@@ -12,5 +12,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 
-ENTRYPOINT dotnet W3ChampionsStatisticService.dll
+ENV ASPNETCORE_URLS http://*:5000
+
 ENTRYPOINT ["dotnet", "mydotnet.dll"]
