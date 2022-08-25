@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "install": "cd app && npm i",
+    "install": "cd app && yarn install",
     "start": "docker compose -f docker-compose.yml up",
     "stop": "docker compose -f docker-compose.yml down --rmi all -v",
     "restart": "npm run stop && npm run start",
