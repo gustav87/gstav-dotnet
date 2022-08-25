@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "install": "cd app && npm i",
+    "start": "docker compose -f docker-compose.yml up",
+    "stop": "docker compose -f docker-compose.yml down --rmi all -v",
+    "restart": "npm run stop && npm run start",
+    "build": "cd app && rm -r dist && npm run build",
+    "prod": "docker compose -f docker-compose.prod.yml up"
+  }
+}

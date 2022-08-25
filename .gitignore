@@ -1,0 +1,15 @@
+# IDE ignores
+.vscode
+
+# backend ignores
+.env
+[Bb]in
+[Oo]bj
+
+# db ignores
+db/data
+
+# frontend ignores
+app/dist
+node_modules
+

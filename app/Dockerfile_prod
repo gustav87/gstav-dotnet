@@ -1,0 +1,4 @@
+FROM node:16-alpine
+WORKDIR /app/dist
+RUN npm install -g http-server
+CMD npx http-server
