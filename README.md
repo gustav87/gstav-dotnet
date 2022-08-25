@@ -23,8 +23,8 @@ npm restart
 ```
 
 ## Optional steps
-If you wish to use the contact form and the flickr API, then create a file .env in the root, with the following contents, replacing the capitalized strings with your own:
-- mailgun_url = "YOUR_MAILGUN_API_URL"
+If you wish to use the contact form and the flickr API, then create a file named .environment in the same dir as docker-compose.yml, with the following contents, replacing the capitalized strings with your own:
+- mailgun_domain = "YOUR_MAILGUN_DOMAIN"
 - mailgun_api_key = "YOUR_MAILGUN_API_KEY"
 - mailgun_from = "YOUR_MAILGUN_FROM_ADDRESS"
 - flickr_api_key = "YOUR_FLICKR_API_KEY"
