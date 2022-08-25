@@ -59,7 +59,7 @@ export default class DbStuff extends Vue {
       headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({Name: this.name, Email: this.email, Date: today})
     }
-    fetch(`https://${window.location.hostname}:7248/api/guests/insertRow`, requestOptions)
+    fetch(`http://${window.location.hostname}:7248/api/guests/insertRow`, requestOptions)
       .then(response => {
         if (response.ok) {
           this.insertResult = "Record inserted into database.";
@@ -79,7 +79,7 @@ export default class DbStuff extends Vue {
 
   public submitSearchDbForm() {
     const queryString = this.filter ? `?filter=${this.filter}` : ''
-    fetch(`https://${window.location.hostname}:7248/api/guests${queryString}`)
+    fetch(`http://${window.location.hostname}:7248/api/guests${queryString}`)
       .then(response => {
         if (response.ok) {
           return response.json();
