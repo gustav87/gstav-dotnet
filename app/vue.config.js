@@ -1,6 +1,6 @@
 module.exports = {
   devServer: {
-    https: process.env.NODE_ENV === 'production' ? false : true,
-    disableHostCheck: process.env.NODE_ENV === 'production' ? false : true
+    https: process.env.NODE_ENV === 'development' ? true : false,
+    disableHostCheck: process.env.NODE_ENV === 'development' ? true : false
   }
 };

@@ -1,6 +1,5 @@
 const constants = {
-  port: process.env.VUE_APP_BACKEND_PORT,
-  protocol: process.env.VUE_APP_BACKEND_PROTOCOL
+  port: process.env.NODE_ENV === "development" ? 5001 : 5000,
+  protocol: "https"
 };
 export default constants;
-
