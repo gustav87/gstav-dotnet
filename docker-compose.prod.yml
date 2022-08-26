@@ -1,0 +1,35 @@
+services:
+  app:
+    container_name: cgstav-vue
+    build:
+      context: ./app
+      dockerfile: Dockerfile_prod
+    image: gstav-vue
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./app:/app
+
+  backend:
+    container_name: cgstav-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: gstav-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/backend
+    env_file: .environment
+
+  db:
+    container_name: cgstav-db
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    image: gstav-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./db/data:/data/db
+    command: mongod --quiet --logpath /dev/null
