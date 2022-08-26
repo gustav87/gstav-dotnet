@@ -28,6 +28,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+import constants from "@/constants";
 
 @Component({
   components: {
@@ -45,11 +46,9 @@ export default class Contact extends Vue {
 
 
   public async submitForm() {
-    const protocol = process.env.VUE_APP_BACKEND_PROTOCOL;
-    const port = process.env.VUE_APP_BACKEND_PORT;
     try {
       const queryParams = `name=${this.name}&email=${this.email}&topic=${this.topic}&message=${this.message}`
-      const response = await fetch(`${protocol}://${window.location.hostname}:${port}/api/contact?${queryParams}`)
+      const response = await fetch(`${constants.protocol}://${window.location.hostname}:${constants.port}/api/contact?${queryParams}`)
       if (response.status === 200) {
         // const data = await response.json();
         // console.log(data);

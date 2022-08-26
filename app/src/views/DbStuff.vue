@@ -35,6 +35,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+import constants from "@/constants";
 
 @Component({
   components: {
@@ -61,7 +62,7 @@ export default class DbStuff extends Vue {
       headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({Name: this.name, Email: this.email, Date: today})
     }
-    fetch(`${protocol}://${window.location.hostname}:${port}/api/guests/insertRow`, requestOptions)
+    fetch(`${constants.protocol}://${window.location.hostname}:${constants.port}/api/guests/insertRow`, requestOptions)
       .then(response => {
         if (response.ok) {
           this.insertResult = "Record inserted into database.";
@@ -80,11 +81,9 @@ export default class DbStuff extends Vue {
   }
 
   public submitSearchDbForm() {
-    const protocol = process.env.VUE_APP_BACKEND_PROTOCOL;
-    const port = process.env.VUE_APP_BACKEND_PORT;
     const queryString = this.filter ? `?filter=${this.filter}` : '';
 
-    fetch(`${protocol}://${window.location.hostname}:${port}/api/guests${queryString}`)
+    fetch(`${constants.protocol}://${window.location.hostname}:${constants.port}/api/guests${queryString}`)
       .then(response => {
         if (response.ok) {
           return response.json();
