@@ -18,3 +18,4 @@ import PlanetChart from '../components/PlanetChart.vue'
 export default class Chartpage extends Vue {
 }
 </script>
+

@@ -63,3 +63,4 @@ export default class JsBasics extends Vue {
 	border: 1px solid black;
 }
 </style>
+

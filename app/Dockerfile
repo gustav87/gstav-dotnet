@@ -1,3 +1,10 @@
 FROM node:16-alpine
 WORKDIR /app
-CMD npm run serve
+COPY . .
+RUN yarn build
+RUN npm install -g http-server
+ENV VIRTUAL_HOST=gstav.se
+ENV LETSENCRYPT_HOST=gstav.se
+EXPOSE 80
+CMD npx http-server -p 80 dist
+

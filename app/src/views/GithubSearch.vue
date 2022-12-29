@@ -63,3 +63,4 @@ export default class GithubSearch extends Vue {
 
 <style lang="scss" scoped>
 </style>
+

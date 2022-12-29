@@ -16,3 +16,4 @@ import { Component } from 'vue-property-decorator';
 
 export default class VueStuff extends Vue {}
 </script>
+

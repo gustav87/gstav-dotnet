@@ -80,3 +80,4 @@ export default class Map extends Vue {
 	height: 400px;
 }
 </style>
+

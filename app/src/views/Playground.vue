@@ -66,3 +66,4 @@ export default class Playground extends Vue {
 	margin-left: 10px;
 }
 </style>
+
