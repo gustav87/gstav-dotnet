@@ -1,8 +1,7 @@
 # gstav-dotnet
 A webpage with Vue 2 in the frontend, .NET 6.0 running in the backend, and a MongoDB database.
 
-## Development workflow
-# Installation
+## Installation
 For the frontend you need `node` and `npm` installed. For the backend you need the `dotnet` 6 SDK. For the db you need `docker`.
 Run the following to install all frontend dependencies.
 
@@ -11,10 +10,10 @@ cd app
 yarn install
 ```
 
-# Run the frontend
+## Run the frontend
 In the `app` directory, run `yarn serve` to start the frontend listening on port 8080.
 
-# Run the backend
+## Run the backend
 Open the `backend` directory in Visual Studio or VS Code and run the app to start the backend API listening on HTTP port 5000.
 
 ## Run the database
