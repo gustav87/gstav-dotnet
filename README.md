@@ -1,5 +1,5 @@
 # gstav-dotnet
-A webpage with Vue 2 in the frontend, .NET 6.0 running in the backend, and a MongoDB database.
+A webpage with Vue 2 in the frontend, .NET 6.0 running in the backend, and a MongoDB database. Azure is used for automatic deployment to Docker Hub.
 
 ## Installation
 For the frontend you need `node` and `npm` installed. For the backend you need the `dotnet` 6 SDK. For the db you need `docker`.
