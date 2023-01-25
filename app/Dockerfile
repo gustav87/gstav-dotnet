@@ -1,6 +1,7 @@
 FROM node:16-alpine
 WORKDIR /app
 COPY . .
+RUN yarn install
 RUN yarn build
 RUN npm install -g http-server
 ENV VIRTUAL_HOST=gstav.se
