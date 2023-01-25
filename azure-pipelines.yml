@@ -22,7 +22,7 @@ steps:
   displayName: 'Build and push frontend'
   inputs:
     containerRegistry: 'gustav87 Docker Hub'
-    repository: 'gstav-frontend'
+    repository: 'gustav87/gstav-frontend'
     command: 'buildAndPush'
     Dockerfile: '**/app/Dockerfile'
     buildContext: '**'
@@ -31,7 +31,8 @@ steps:
   displayName: 'Build and push backend'
   inputs:
     containerRegistry: 'gustav87 Docker Hub'
-    repository: 'gstav-backend'
+    repository: 'gustav87/gstav-backend'
     command: 'buildAndPush'
     Dockerfile: '**/backend/Dockerfile'
     buildContext: '**'
+
