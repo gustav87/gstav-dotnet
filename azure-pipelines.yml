@@ -25,7 +25,7 @@ steps:
     repository: 'gstav-frontend'
     command: 'buildAndPush'
     Dockerfile: '**/app/Dockerfile'
-    buildContext: '**/app'
+    buildContext: '**'
 
 - task: Docker@2
   displayName: 'Build and push backend'
@@ -34,4 +34,4 @@ steps:
     repository: 'gstav-backend'
     command: 'buildAndPush'
     Dockerfile: '**/backend/Dockerfile'
-    buildContext: '**/backend'
+    buildContext: '**'
