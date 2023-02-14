@@ -17,7 +17,8 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import axios from 'axios'
+import axios from 'axios';
+import constants from "@/constants";
 
 @Component({
   components: {
@@ -29,7 +30,7 @@ export default class Home extends Vue {
 
   tasks = [];
   item = {
-    url: `${window.location.protocol}//${window.location.hostname}:5000/CV.pdf`,
+    url: `${constants.backend_url}/api/cv`,
     text: "Curriculum Vitae"
   }
 
