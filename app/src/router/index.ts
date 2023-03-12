@@ -12,6 +12,7 @@ const VueStuff = () => import('../views/VueStuff.vue')
 const FlickrViewer = () => import('../views/FlickrViewer.vue')
 const DbStuff = () => import('../views/DbStuff.vue')
 const JsStuff = () => import('../views/JsStuff.vue')
+const Login = () => import('../views/Login.vue')
 const NotFound = () => import('../views/NotFound.vue')
 
 Vue.use(VueRouter)
@@ -76,6 +77,11 @@ const routes: Array<RouteConfig> = [
     path: '/playground/jsStuff',
     name: 'JsStuff',
     component: JsStuff
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
   {
     path: '/:catchAll(.*)',

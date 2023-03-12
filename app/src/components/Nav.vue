@@ -16,6 +16,9 @@
 			<li class="nav-item" :class="{'color-nav': $route.path == '/contact'}">
 				<router-link class="nav-link" to="/contact">Contact</router-link>
 			</li>
+			<li class="nav-item" :class="{'color-nav': $route.path == '/login'}">
+				<router-link class="nav-link" to="/login">Log in</router-link>
+			</li>
 		</ul>
 	</nav>
 </template>
