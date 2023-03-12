@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 const Home = () => import('../views/Home.vue')
-const Blog = () => import('../views/Blog.vue')
+//const Blog = () => import('../views/Blog.vue')
+import Blog from "@/views/Blog.vue";
 const Playground = () => import('../views/Playground.vue')
 const Contact = () => import('../views/Contact.vue')
 const Colors = () => import('../views/Colors.vue')
