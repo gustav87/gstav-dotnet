@@ -1,6 +1,3 @@
-# IDE ignores
-.vscode
-
 # backend ignores
 .environment
 [Bb]in
