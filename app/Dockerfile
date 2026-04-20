@@ -1,6 +1,6 @@
 # nginx:stable-alpine doesn't contain npm or yarn, so we need to use the node image to run 'yarn install' first.
 
-FROM node:18-alpine as build-stage
+FROM node:24-alpine as build-stage
 WORKDIR /app
 
 # copy only the relevant files, and especially do not copy node_modules.
