@@ -3,7 +3,7 @@ A webpage with Vue 2 in the frontend, .NET 6.0 in the backend, and MongoDB. Azur
 
 ## Setup
 For the frontend you need `node` and `npm` installed. For the backend you need the `dotnet` 6 SDK. For the db you need `docker`.
-Run `npm install` inside the `app` directory to install all frontend dependencies.
+Run `npm install` inside the `app` directory to install the frontend dependencies.
 
 ## Run the frontend
 In the `app` directory, run `npm run serve` to start the frontend listening on port 8080.
