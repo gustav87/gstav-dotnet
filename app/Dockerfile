@@ -18,8 +18,5 @@ COPY --from=build-stage /app/dist /usr/share/nginx/html
 
 COPY default.conf /etc/nginx/conf.d/
 
-ENV VIRTUAL_HOST=gstav.se,www.gstav.se
-ENV LETSENCRYPT_HOST=gstav.se,www.gstav.se
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-

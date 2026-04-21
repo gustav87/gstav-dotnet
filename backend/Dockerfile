@@ -12,9 +12,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 
-ENV ASPNETCORE_URLS http://*:80
-ENV VIRTUAL_HOST=backend.gstav.se
-ENV LETSENCRYPT_HOST=backend.gstav.se
+ENV ASPNETCORE_URLS=http://*:80
 EXPOSE 80
 
 ENTRYPOINT ["dotnet", "mydotnet.dll"]
