@@ -1,8 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - main
 
@@ -22,7 +17,7 @@ steps:
   displayName: 'Build and push frontend'
   inputs:
     containerRegistry: 'gustav87 Docker Hub'
-    repository: 'gustav87/gstav-frontend'
+    repository: 'gustav87/gstav-se-biang-frontend'
     command: 'buildAndPush'
     Dockerfile: '**/app/Dockerfile'
     buildContext: '**'
@@ -31,8 +26,7 @@ steps:
   displayName: 'Build and push backend'
   inputs:
     containerRegistry: 'gustav87 Docker Hub'
-    repository: 'gustav87/gstav-backend'
+    repository: 'gustav87/gstav-se-biang-backend'
     command: 'buildAndPush'
     Dockerfile: '**/backend/Dockerfile'
     buildContext: '**'
-

@@ -1,5 +1,4 @@
-# gstav-dotnet
-A webpage with Vue 2 in the frontend, .NET 6.0 in the backend, and MongoDB. Azure is used for automatic deployment to Docker Hub.
+Second iteration of my website. Built with Vue 2 in the frontend, .NET 6.0 in the backend, and MongoDB. Containerized using Docker. Azure devops is used for CI.
 
 ## Setup
 For the frontend you need `node` and `npm` installed. For the backend you need the `dotnet` 6 SDK. For the db you need `docker`.
@@ -14,7 +13,7 @@ Open the `backend` directory in Visual Studio or VS Code and run the app to star
 ## Run the database
 Run the following to start up a container running mongod listening on port 27017 on localhost.
 
-```
+```shell
 docker run --name gstav-db -p 27017:27017 mongo`
 ```
 

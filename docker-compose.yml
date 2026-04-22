@@ -1,21 +1,21 @@
 services:
   app:
-    container_name: cgstav-vue
+    container_name: cbiang-frontend
     build:
       context: ./app
       dockerfile: Dockerfile
-    image: gstav-vue
+    image: biang-frontend
     ports:
       - "8080:8080"
     volumes:
       - ./app:/app
 
   backend:
-    container_name: cgstav-backend
+    container_name: cbiang-backend
     build:
       context: ./backend
       dockerfile: Dockerfile
-    image: gstav-backend
+    image: biang-backend
     ports:
       - "5000:5000"
     volumes:
@@ -23,11 +23,11 @@ services:
     env_file: .environment
 
   db:
-    container_name: cgstav-db
+    container_name: cbiang-db
     build:
       context: ./db
       dockerfile: Dockerfile
-    image: gstav-db
+    image: biang-db
     ports:
       - "27017:27017"
     volumes:
